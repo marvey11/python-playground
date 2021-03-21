@@ -1,0 +1,13 @@
+[MASTER]
+init-hook="import sys; from pathlib import Path; sys.path.insert(0, str(Path.cwd() / 'src'));"
+
+ignore=playground
+
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+
+# disable E1136 due to the fact that pylint seems to have problems with typing options like Union[str, int]
+# --> see also https://github.com/PyCQA/pylint/issues/3882
+disable=unsubscriptable-object
